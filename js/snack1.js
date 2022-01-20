@@ -5,6 +5,8 @@ console.log('OK JS!')
         Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
         Stampare in console la bici con peso minore utilizzando destructuring e template literal
     */
+const result = document.getElementById('result');
+const paragraph = document.createElement('p');
 
 const bikes = [{
         nome: 'merida',
@@ -30,10 +32,12 @@ let nameMin = '';
 for (let i = 0; i < bikes.length - 1; i++) {
     const { nome, peso } = bikes[i];
     const nextPeso = bikes[i + 1].peso;
-    // console.log(min);
     if (nextPeso > peso) {
         min = peso;
         nameMin = nome;
         console.log(`La bicicletta ${nameMin} è quella che pesa di meno, ovvero: ${min} kg `);
+        paragraph.append(`La bicicletta ${nameMin} è quella che pesa di meno, ovvero: ${min} kg `);
     }
 }
+
+result.appendChild(paragraph);

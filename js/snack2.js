@@ -6,6 +6,8 @@
     Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
 */
+const result = document.getElementById('result');
+const paragraph = document.createElement('p');
 
 const teams = [{
         nome: 'Inter',
@@ -57,3 +59,5 @@ for (let i = 0; i < teams.length; i++) {
 }
 
 console.table(newArray);
+paragraph.append(newArray);
+result.appendChild(paragraph);
