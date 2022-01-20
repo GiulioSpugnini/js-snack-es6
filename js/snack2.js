@@ -8,37 +8,40 @@
 */
 
 const teams = [{
-    nome: 'Inter',
-    puntiFatti: 0,
-    falliSubiti: 0,
-}, ]
-const teams = [{
-    nome: 'Milan',
-    puntiFatti: 0,
-    falliSubiti: 0,
-}, ]
-const teams = [{
-    nome: 'Atalanta',
-    puntiFatti: 0,
-    falliSubiti: 0,
-}, ]
-const teams = [{
-    nome: 'Juventus',
-    puntiFatti: 0,
-    falliSubiti: 0,
-}, ]
-const teams = [{
-    nome: 'Verona',
-    puntiFatti: 0,
-    falliSubiti: 0,
-}, ]
-const teams = [{
-    nome: 'Torino',
-    puntiFatti: 0,
-    falliSubiti: 0,
-}, ]
-const teams = [{
-    nome: 'Lazio',
-    puntiFatti: 0,
-    falliSubiti: 0,
-}, ]
+        nome: 'Inter',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    }, {
+        nome: 'Milan',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    },
+    {
+        nome: 'Atalanta',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    }, {
+        nome: 'Juventus',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    }, {
+        nome: 'Verona',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    }, {
+        nome: 'Torino',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    }, {
+        nome: 'Lazio',
+        puntiFatti: 0,
+        falliSubiti: 0,
+    },
+]
+
+
+function getRndNumber(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+console.log(getRndNumber(1, 10));
