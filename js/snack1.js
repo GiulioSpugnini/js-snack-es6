@@ -27,7 +27,7 @@ const bikes = [{
 
 let min = 0;
 let nameMin = '';
-for (let i = 0; i < bikes.length; i++) {
+for (let i = 0; i < bikes.length - 1; i++) {
     const { nome, peso } = bikes[i];
     const nextPeso = bikes[i + 1].peso;
     // console.log(min);
@@ -37,7 +37,3 @@ for (let i = 0; i < bikes.length; i++) {
         console.log(`La bicicletta ${nameMin} è quella che pesa di meno, ovvero: ${min} kg `);
     }
 }
-
-
-
-// console.log(`La bicicletta con peso minore è: ${nome} e pesa: ${peso} `);
