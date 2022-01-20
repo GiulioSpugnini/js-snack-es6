@@ -45,11 +45,15 @@ function getRndNumber(min, max) {
 }
 
 console.log(getRndNumber(1, 10));
-
+const newArray = [];
 for (let i = 0; i < teams.length; i++) {
-    let { puntiFatti, falliSubiti } = teams[i];
+    let { nome, puntiFatti, falliSubiti } = teams[i];
     puntiFatti = getRndNumber(1, 100);
     falliSubiti = getRndNumber(1, 1000);
-    console.log(puntiFatti);
-    console.log(falliSubiti);
+    console.log('punti: ' + puntiFatti);
+    console.log('falli ' + falliSubiti);
+    newArray.push(nome);
+    newArray.push(falliSubiti);
 }
+
+console.table(newArray);
