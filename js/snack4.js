@@ -16,7 +16,7 @@ const filterStudent = (student, key, value) => student[key] === value;
 const students = [{
         id: 90,
         nome: 'giulio',
-        sommaVoti: 119,
+        sommaVoti: 121,
     },
     {
         id: 8,
@@ -38,5 +38,7 @@ const students = [{
 //! ESECUZIONE
 const studentUppercase = students.map(student => capitalizeFirstLetter(student.nome));
 const student70 = students.filter(student => student.id > 70 ? true : false);
+const student70Id120 = students.filter(student => student.id > 70 && student.sommaVoti > 120 ? true : false);
 console.table(studentUppercase);
 console.table(student70);
+console.table(student70Id120);
