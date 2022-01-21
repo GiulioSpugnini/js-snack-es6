@@ -8,31 +8,34 @@ SNACK 4
 */
 //#FUNZIONI
 //Ottengo la prima lettera maiuscola
-const getUpperCase = (word) => word[0].toUpperCase();
+function capitalizeFirstLetter(nome) {
+    return nome.charAt(0).toUpperCase() + nome.slice(1);
+}
 const filterStudent = (student, key, value) => student[key] === value;
 //??ELEMENTI DA UTILIZZARE
 const students = [{
         id: 9,
-        nome: 'Giulio',
+        nome: 'giulio',
         sommaVoti: 119,
     },
     {
         id: 8,
-        nome: 'Antonio',
+        nome: 'antonio',
         sommaVoti: 90,
     },
     {
         id: 13,
-        nome: 'Vasco',
+        nome: 'vasco',
         sommaVoti: 69,
     },
     {
         id: 3,
-        nome: 'Davide',
+        nome: 'davide',
         sommaVoti: 130,
     },
 ]
 
 //! ESECUZIONE
-const studentList = students.filter((student) => filterStudent(student, 'nome', getUpperCase(value)));
-console.log(studentList);
+const newList = students.map(student => capitalizeFirstLetter(student.nome));
+
+console.table(newList);
