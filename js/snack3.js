@@ -5,18 +5,17 @@ SNACK 3
     Usiamo i nuovi metodi degli array visti oggi in classe.
  */
 // #FUNZIONE
-const getSubNumbers = (array, a, b) => {
-    const newArray = [];
-    for (let i = a; i <= b; i++) {
-        newArray.push(array[i]);
-    }
-    return console.log(newArray);
+const subWords = (array, a, b) => {
+    const newArray = array.filter((word, i) => {
+        if (i >= a && i <= b) return true;
+        else return false;
+    });
+    return newArray;
 }
 
 // ??Elementi da utilizzare
-const numbers = ['giulio', 'carlo', 'antonio', 'giuseppe', 'federico', 'linda', 'laura'];
+const words = ['giulio', 'carlo', 'antonio', 'giuseppe', 'federico', 'linda', 'laura'];
+
 
 // !ESECUZIONE
-const newNumbers = numbers.filter(() => getSubNumbers(numbers, 2, 4));
-console.log(newNumbers);
-// console.log(getSubNumbers(numbers, 2, 4));
+console.log(subWords(words, 2, 5));
