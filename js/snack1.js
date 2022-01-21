@@ -35,9 +35,9 @@ for (let i = 0; i < bikes.length - 1; i++) {
     if (nextPeso > peso) {
         min = peso;
         nameMin = nome;
-        console.log(`La bicicletta ${nameMin} è quella che pesa di meno, ovvero: ${min} kg `);
-        paragraph.append(`La bicicletta ${nameMin} è quella che pesa di meno, ovvero: ${min} kg `);
     }
 }
+console.log(`La bicicletta ${nameMin} è quella che pesa di meno, ovvero: ${min} kg `);
+paragraph.append(`La bicicletta ${nameMin} è quella che pesa di meno, ovvero: ${min} kg `);
 
 result.appendChild(paragraph);
