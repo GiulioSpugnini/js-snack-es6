@@ -51,12 +51,23 @@ const newArray = [];
 for (let i = 0; i < teams.length; i++) {
     let { nome, puntiFatti, falliSubiti } = teams[i];
     puntiFatti = getRndNumber(1, 100);
-    falliSubiti = getRndNumber(1, 1000);
+    falliSubiti = getRndNumber(10, 200);
     console.log('punti: ' + puntiFatti);
     console.log('falli ' + falliSubiti);
     newArray.push({ nome, falliSubiti });
 }
-
+let content = '';
+const tableData = document.getElementById('tbody');
+for (let i = 0; i < newArray.length; i++) {
+    const { nome, falliSubiti } = newArray[i];
+    content += `
+        <tr>
+        <td> ${nome}</td>
+        <td> ${falliSubiti}</td>
+        </tr>
+    `;
+}
+tableData.innerHTML = content;
 console.table(newArray);
-paragraph.append(newArray);
-result.appendChild(paragraph);
+// paragraph.append(newArray);
+// result.appendChild(paragraph);

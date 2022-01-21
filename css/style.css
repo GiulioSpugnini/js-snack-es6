@@ -3,3 +3,15 @@
     margin: 0 auto;
     box-sizing: border-box;
 }
+
+table th {
+    padding: 10px;
+    background-color: darkolivegreen;
+    color: white;
+}
+
+#tbody tr>td {
+    padding: 10px;
+    background-color: darkolivegreen;
+    color: white;
+}
