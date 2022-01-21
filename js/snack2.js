@@ -54,8 +54,7 @@ for (let i = 0; i < teams.length; i++) {
     falliSubiti = getRndNumber(1, 1000);
     console.log('punti: ' + puntiFatti);
     console.log('falli ' + falliSubiti);
-    newArray.push(nome);
-    newArray.push(falliSubiti);
+    newArray.push({ nome, falliSubiti });
 }
 
 console.table(newArray);
